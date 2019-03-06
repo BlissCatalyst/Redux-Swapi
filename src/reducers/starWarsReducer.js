@@ -10,15 +10,22 @@ export const charsReducer = (state = initialState, action) => {
     // your switch statement should handle all of these cases.
     case FETCHING:
     return {
-      
+      ...state,
+      error: '',
+      isLoading: true
     };
     case SUCCESS:
     return {
-
+      ...state,
+      error: '',
+      isLoading: false,
+      CharacterList: action.payload
     };
     case FAILURE:
     return {
-
+      ...state,
+      error: action.payload,
+      isLoading: false
     };
     default:
       return state;
