@@ -25,6 +25,7 @@ class CharacterListView extends React.Component {
     }
     return (
       <div className="CharactersList_wrapper">
+        <p>Supposed to be a character list.</p>
         <CharacterList characters={this.props.characters} />
       </div>
     );
@@ -35,7 +36,7 @@ class CharacterListView extends React.Component {
 // the characters and the fetching boolean
 const mapStateToProps = state => ({
   isLoading: state.isLoading,
-  CharacterList: state.characterList,
+  characters: state.characters,
   error: state.error
 });
 
