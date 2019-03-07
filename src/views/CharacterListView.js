@@ -13,7 +13,7 @@ class CharacterListView extends React.Component {
 
   componentDidMount() {
     // call our action
-    getCharacterList();
+    this.props.getCharacterList();
   }
 
   render() {
