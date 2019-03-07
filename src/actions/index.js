@@ -12,9 +12,8 @@ export const FAILURE = "FAILURE";
 
 export const getCharacterList = () => dispatch => {
   dispatch({ type: FETCHING });
-  axios
-    .get('https://swapi.co/api/people/')
-    .then(res => {
+  const request = axios.get('https://swapi.co/api/people/');
+    request.then(res => {
       dispatch({ type: SUCCESS, payload: res.data.results });
     })
     .catch(err => {
